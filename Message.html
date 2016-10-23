@@ -78,10 +78,141 @@ img.emoji {
 	</script>
 	<style type="text/css" media="screen"> .simple-social-icons ul li a, .simple-social-icons ul li a:hover { background-color: #F89C3F !important; border-radius: 24px; color: #ffffff !important; border: 0px #ffffff solid !important; font-size: 24px; padding: 12px; }  .simple-social-icons ul li a:hover { background-color: #666666 !important; border-color: #ffffff !important; color: #ffffff !important; }</style>
         
- </head>
+<script type="text/javascript">
+        function setSocialButton(pad){
+            var socialButton = document.getElementById("IATS_Payment_ShareLinkDiv");
+            if(socialButton != null){
+            socialButton.style.padding = pad;}
+        }
+        function setMainContent(dim){
+            var mainbar = document.getElementById("contentMain");
+            mainbar.style.width = dim;
+        }
+        var _hidediv = null;
+        function toggleDivShow(id,show) {
+            if(_hidediv){
+            _hidediv();}
+            var div = document.getElementById(id);
+            if(show == 1){
+            div.style.display = 'block';}
+            else{
+            div.style.display = 'none';
+            }
+        }
+        function hideNav(hide){
+            toggleDivShow("nav_menu-3", hide);
+            toggleDivShow("nav_menu-4", hide);
+            toggleDivShow("taco", hide);
+            toggleDivShow("dropStuff", !hide);
+        }
+        function showMe() {
+            document.getElementById("dropList").classList.toggle("show");
+        }
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+        if (!event.target.matches('.dropButt')) {
+            var dropdowns = document.getElementsByClassName("drop-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        function alignToScreen(){
+            var width = document.body.clientWidth;
+
+            if(width < 900){
+                hideNav(0);
+            }
+            else{
+                hideNav(1);
+            }
+            
+        }</script>
+    </head>
     
-<body>
-    <!-- add updated header-->
+    
+    <body onresize="alignToScreen()">
+        
+        <header class="site-header" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+            <div class="wrap">
+            <div class="title-area">
+                <h1 class="site-title" itemprop="headline">
+                    <a href="https://womenshabitat.ca/">Women&#039;s Habitat</a>
+                </h1>
+                <h2 class="site-description" itemprop="description">
+                    Shelter and Outreach for Women
+                </h2>
+            </div>
+            <aside class="widget-area header-widget-area"><section id="nav_menu-3" class="widget widget_nav_menu"><div class="widget-wrap"><nav class="nav-header" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"><ul id="menu-top-menu" class="menu genesis-nav-menu"><li id="menu-item-62" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-62"><a href="https://womenshabitat.ca/about/">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-133" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-133"><a href="https://womenshabitat.ca/about/mission-and-vision/">Mission, Vision and Values</a></li>
+	<li id="menu-item-135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-135"><a href="https://womenshabitat.ca/about/history/">History</a></li>
+	<li id="menu-item-136" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-136"><a href="https://womenshabitat.ca/about/board/">Board of Directors</a></li>
+	<li id="menu-item-137" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137"><a href="https://womenshabitat.ca/about/management-team/">Management Team</a></li>
+	<li id="menu-item-138" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-138"><a href="https://womenshabitat.ca/about/financial/">Financial and Newsletters</a></li>
+	<li id="menu-item-140" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-140"><a href="https://womenshabitat.ca/about/contact/">Contact</a></li>
+</ul>
+</li>
+<li id="menu-item-75" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-page-parent menu-item-has-children menu-item-75"><a href="https://womenshabitat.ca/how-to-help/">How to Help</a>
+<ul class="sub-menu">
+	<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="https://womenshabitat.ca/how-to-help/personal-fundraising-campaign/">Personal Fundraising Campaign</a></li>
+	<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="https://womenshabitat.ca/how-to-help/volunteer/">Volunteer</a></li>
+	<li id="menu-item-145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-145"><a href="https://womenshabitat.ca/how-to-help/in-kind/">In-kind</a></li>
+	<li id="menu-item-142" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-142"><a href="https://womenshabitat.ca/how-to-help/current-partners/">Current Partners</a></li>
+</ul>
+</li>
+<li id="menu-item-60" class="pop sub menu-item menu-item-type-post_type menu-item-object-page menu-item-60"><a href="https://womenshabitat.ca/subscribe/">Subscribe</a></li>
+<li id="menu-item-61" class="pop don menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-54 current_page_item menu-item-61"><a href="https://womenshabitat.ca/how-to-help/donate/">Donate</a></li>
+</ul></nav></div></section></aside>
+                
+                <nav id="nav_menu-4" class="nav-primary" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"><div id="taco" class="wrap"><ul id="menu-main-menu" class="menu genesis-nav-menu menu-primary"><li id="menu-item-74" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-74"><a href="https://womenshabitat.ca/shelter/">Shelter</a>
+<ul class="sub-menu">
+	<li id="menu-item-370" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-370"><a href="https://womenshabitat.ca/shelter/shelter-faqs/">Shelter FAQs</a></li>
+	<li id="menu-item-371" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-371"><a href="https://womenshabitat.ca/shelter/shelter-life-for-women/">Shelter Life for Women</a></li>
+	<li id="menu-item-393" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-393"><a href="https://womenshabitat.ca/shelter/shelter-life-for-children/">Shelter Life for Children</a></li>
+	<li id="menu-item-368" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-368"><a href="https://womenshabitat.ca/shelter/photo-tour/">Photo Tour</a></li>
+	<li id="menu-item-369" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-369"><a href="https://womenshabitat.ca/shelter/preparing-for-the-shelter/">Preparing for the Shelter</a></li>
+</ul>
+</li>
+<li id="menu-item-73" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-73"><a href="https://womenshabitat.ca/outreach/">Outreach</a>
+<ul class="sub-menu">
+	<li id="menu-item-375" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-375"><a href="https://womenshabitat.ca/outreach/outreach-services/">Outreach Services</a></li>
+	<li id="menu-item-372" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-372"><a href="https://womenshabitat.ca/outreach/programs-for-women/">Programs for Women</a></li>
+	<li id="menu-item-373" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-373"><a href="https://womenshabitat.ca/outreach/programs-for-women-and-children/">Programs for Women and Children</a></li>
+	<li id="menu-item-374" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-374"><a href="https://womenshabitat.ca/outreach/programs-for-youth/">Programs for Youth</a></li>
+	<li id="menu-item-376" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-376"><a href="https://womenshabitat.ca/outreach/drop-in-programs/">Drop-In Programs</a></li>
+	<li id="menu-item-1387" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1387"><a href="https://womenshabitat.ca/outreach/calendar/">Calendar</a></li>
+	<li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a href="https://womenshabitat.ca/outreach/notices/">Notices</a></li>
+</ul>
+</li>
+<li id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-72"><a href="https://womenshabitat.ca/resources/">Resources</a>
+<ul class="sub-menu">
+	<li id="menu-item-377" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-377"><a href="https://womenshabitat.ca/resources/signs-of-abuse/">Signs of Abuse</a></li>
+	<li id="menu-item-378" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-378"><a href="https://womenshabitat.ca/resources/studies-and-report/">Studies and Reports</a></li>
+	<li id="menu-item-379" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-379"><a href="https://womenshabitat.ca/resources/community-resources/">Community Resources</a></li>
+</ul>
+</li>
+<li class="right search"><form method="get" class="search-form" action="https://womenshabitat.ca/" role="search"><input type="search" name="s" placeholder="" /><input type="submit" value="Search" /></form></li></ul></div></nav>
+
+                <div  class="dropDeadTired">
+                    <button id="dropStuff" class="dropButt" onClick="showMe()"></button>
+                    <div id="dropList" class="drop-content">
+                        <a href="https://womenshabitat.ca/about/">About</a>
+                        <a href="https://womenshabitat.ca/how-to-help/">How to help</a>
+                        <a href="https://womenshabitat.ca/shelter/">Shelter</a>
+                        <a href="https://womenshabitat.ca/outreach/">Outreach</a>
+                        <a href="https://womenshabitat.ca/resources/">Resources</a>
+                        <a href="https://womenshabitat.ca/subscribe/">Subscribe</a>
+                        <a href="https://womenshabitat.ca/how-to-help/donate/">Donate</a>
+                </div>
+                </div>
+        </div>
+            
+        </header>
     
     <h2 class="messageBody" id="messageBody">Thank you for your donation.<br><br>No matter what, how, when, where, who or why you choose to donate to Women's Habitat the positive effects of your donation will help us to help women in fundamental needs.  Moreover the spinoff or indirect benefits of your donation will also benefit others.<br><br>If you wish for further information about your donation or indeed our organization and our services please use our 
         <a href="https://womenshabitat.ca/about/contact/">Contact Page</a>
@@ -102,6 +233,9 @@ img.emoji {
 <script type='text/javascript' src='https://womenshabitat.ca/wp-includes/js/wp-embed.min.js?ver=4.5.4'></script>
 <script type="text/javascript" id="slb_context">/* <![CDATA[ */if ( !!window.jQuery ) {(function($){$(document).ready(function(){if ( !!window.SLB ) { {$.extend(SLB, {"context":["public","user_guest"]});} }})})(jQuery);}/* ]]> */</script>
     <link rel='stylesheet' id='womens-habitat-css' href='style.css' type='text/css' media="all"/> <!--to overwrite servers settings-->
+    <script type="text/javascript">
+    alignToScreen();
+    </script>
     </body>
 
 </html>
