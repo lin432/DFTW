@@ -5,6 +5,7 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 
 note requires JQuery
+link to http://www.yinlintao.com/media/DFTWDonate.html
 -->
 <html>
     <head>
@@ -49,7 +50,7 @@ img.emoji {
 <script type='text/javascript' src='https://womenshabitat.ca/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
 <script type='text/javascript' src='https://womenshabitat.ca/wp-content/plugins/wptextresizecontrols//text.js?ver=4.5.4'></script>
 <script type='text/javascript' src='https://womenshabitat.ca/wp-content/plugins/wp-jquery-timelinr/assets/js/jquery.timelinr-1.0.js?ver=4.5.4'></script>
-<script type="text/javascript" src="DonatorMessage.js"></script>
+<script type="text/javascript" src="Scripts.js"></script>
 <link rel='https://api.w.org/' href='https://womenshabitat.ca/wp-json/' />
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://womenshabitat.ca/xmlrpc.php?rsd" />
 <link rel="alternate" type="application/json+oembed" href="https://womenshabitat.ca/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwomenshabitat.ca%2Fhow-to-help%2Fdonate%2F" />
@@ -239,12 +240,84 @@ img.emoji {
         
             <div class="content-sidebar-wrap">
             
-            <!--iats goes here? after iats popup or new webpage? or send email?-->
             <main class="content" id="contentMain" role="main" itemprop="mainContentOfPage">
+                
+                
+                <p><font size="12">Donate Funds </font></p>
+                <div class="Fancy_Blurb">"Your donation helps break the cycle of violence and poverty for families".</div>
+    <p></p>
+
+    <p class="small"><font size="0.8">Your donation is 3 minutes away</font></p>
+    <h1 style="color:#69B3B7;"> Personal information</h1>
+    <p class="small">Email</p>
+    <form action="">
+        <input class="TextOurLong" type="text" name="EmailText" value="" /><br />
+        <p class="small">First Name</p> <p class="smallRight">Last Name</p><br>
+        <input class="TextOurShort" type="text" name="FirstName"  value="" />&emsp; &emsp; &emsp;&emsp; <input class="TextOurShort" type="text" name="LastName" value=""/><br>
+        <p class="small">Street Address</p>
+        <input class="TextOurLong" type="text" name="StreetAdd" value=" " /><br/>
+        <p class="small">Mailing Address</p>
+        <input class="TextOurLong" type="text" name="MailAdd" value=" " /><br/>
+        <p class="small">City &emsp;&emsp;&emsp;&emsp;</p><p class="smallRight">Province</p><br>
+        <input class="TextOurShort" type="text" name="City" value="" />&emsp; &emsp; &emsp;&emsp; <input class="TextOurShort" type="text" name="Province" value=""/><br />
+        <p class="small">Postal Code</p><p class="smallRight">Country</p><br>
+        <input class="TextOurShort" type="text" name="PostalCode" value=""/>&emsp; &emsp; &emsp;&emsp; <input class="TextOurShort" type="text" name="Country" value=""/>
+
+        <h1 style="color:#69B3B7; padding-top: 20px">Your Support</h1>
+        
+        <script></script>
+        <p class="small" style="display: block;">Frequency</p>
+        <input class="toggleButt" type="button" name="One" value="one time" style="margin-right:15%;"/>
+        <input class="toggleButt" type="button" name="Monthly" value="Monthly" style="margin-right:15%;"/>
+        <input class="toggleButt" type="button" name="Quarter" value="Quarterly" style="margin-right:15%;"/>
+        <input class="toggleButt" type="button" name="Yearly" value="Yearly" style="margin-right:15%;"/>
+        
+        <p class="small" style="display: block; padding-top: 20px;">Amount</p>
+        <input type="button" name="amount" value="50" style="margin-right:25%;"/>
+        <input type="button" name="Custom" value="Other"/>
+        <input class="TextOurShort" type="text" name="Other" value="" style="padding:8px;"/><br/>
+        <p>50$ Will provide food and groceries for a women once she leaves the shelter</p>
+        <p>&emsp;</p>
+        
+        <h2 style="color:#69B3B7;">Payment Information </h2>
+        <button type="submit" style="background-color:transparent; border-color:transparent;">
+            <img src="images\VISA.png" height="35" alt="Visa"/>
+        </button>
+        <button type="submit" style="background-color:transparent; border-color:transparent;">
+            <img src="images\Interac.png" height="35" alt="Interac"/>
+        </button>
+        <button type="submit" style="background-color:transparent; border-color:transparent;">
+            <img src="images\Mastercard.png" height="35" alt="Mastercard"/>
+        </button>
+        <button type="submit" style="background-color:transparent; border-color:transparent;">
+            <img src="images\Paypal.png" height="35" alt="Paypal"/>
+        </button>
+        
+        <div id="cardDiv" class="card-box">
+                <p class="small">Card Holder Name</p><br>
+                <input class="TextOurShortGrey" type="text" name="cardHolder" value =""/><br><br>
+                <p class="small">Credit card Number</p> <p class="smallRight" style="left:290px">CCV</p><br>
+                <input class="TextOurShortGrey" type="text" name="cardNumber" value =""/>&emsp; &emsp; &emsp;&emsp;
+                <input class="TextOurShortGrey" type="text" name="CCV" value =""/><br><br>
+                <p class="small">Expiration</p><br><br>
+                Month: <input class="TextOurShortGrey" type="text" name="expiryDay" value="" style="max-width:40px; min-width:60px; max-height: 40px">&emsp; &emsp; &emsp;&emsp;
+                Year: <input class="TextOurShortGrey" type="text" name="expiryMonth" value="" style="max-width: 120px; min-width: 120px; max-height: 40px;"/>
+        </div><br><br>
+       
+
+        <input type="checkbox" name="donation" value="anon" style="position:relative; right:5px; max-width: 40px;"/>I want the donation to be anonymous
+        <br><br>
+        <p>We have taken concrete steps to ensure your information is secure and safe.</br>
+        If you have any further questions or concerns please 
+        <a href="mailto:lalmanzan@womens-habitat.ca"target="_top">contact us</a></p>
+        
+       <button type="button" onclick="message()" style="margin-left: 8em; padding: 20px; float:center;">submit my secure donation</button>
+       <p>&nbsp;</p>
+
+        </form>
                 <script type="text/javascript" src="https://www.iatspayments.com/AURA/AURA.aspx?PID=PA38A5E0D15EC65FD4">
                 </script>
-                
-                <button onClick="message()">press me</button>
+
             </main>
             
             <aside class="sidebar sidebar-primary widget-area" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
@@ -276,8 +349,6 @@ img.emoji {
 <li><span class="tweet-text">Important announcement from our Outreach Centre: Our Housing Drop-In Session is cancelled tonight <a href="https://t.co/6dSk2eJp7T" target="_blank">https://t.co/6dSk2eJp7T</a></span> <span class="tweet-details"><a href="http://twitter.com/WomensHabitat/status/788781638209589248" target="_blank" rel="nofollow"><span style="font-size: 85%;">October 19, 2016 4:39 pm</span></a></span></li><li><span class="tweet-text">Check out this great opportunity from our community partner <a href="http://www.twitter.com/scadding_court" target="_blank">@scadding_court</a> ! <a href="https://t.co/ZXJ0iiQr4A" target="_blank">https://t.co/ZXJ0iiQr4A</a></span> <span class="tweet-details"><a href="http://twitter.com/WomensHabitat/status/788745412685369345" target="_blank" rel="nofollow"><span style="font-size: 85%;">October 19, 2016 2:15 pm</span></a></span></li><li><span class="tweet-text">Thankful for our supporters, our funders, our community partners and the women and children who inspire us everyday… <a href="https://t.co/5pHmfbtVoO" target="_blank">https://t.co/5pHmfbtVoO</a></span> <span class="tweet-details"><a href="http://twitter.com/WomensHabitat/status/785515453720461312" target="_blank" rel="nofollow"><span style="font-size: 85%;">October 10, 2016 4:20 pm</span></a></span></li><li class="last"><a href="http://twitter.com/WomensHabitat">https://twitter.com/WomensHabitat</a></li></ul>
 </div></section></aside>
             
-            
-           
             </div>
           </div>
         
@@ -305,8 +376,13 @@ img.emoji {
 <script type='text/javascript' src='https://womenshabitat.ca/wp-includes/js/wp-embed.min.js?ver=4.5.4'></script>
 <script type="text/javascript" id="slb_context">/* <![CDATA[ */if ( !!window.jQuery ) {(function($){$(document).ready(function(){if ( !!window.SLB ) { {$.extend(SLB, {"context":["public","user_guest"]});} }})})(jQuery);}/* ]]> */</script>
     <link rel='stylesheet' id='womens-habitat-css' href='style.css' type='text/css' media="all"/> <!--to overwrite servers settings-->
-    <script>
+    
+    <script type="text/javascript">
     alignToScreen();
+    var main = document.getElementById("IATS_PaymentBoxDiv");
+    if(main != null){
+        main.hidden = "true";
+    }
     </script>
     </body>
 </html>

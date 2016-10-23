@@ -2366,7 +2366,7 @@ Media Queries
 /* IATS */
 
 div.IATS_Div {
-    display: block;
+    display: none;
     font-size: 100%;
     height: auto;
     margin: 4px;
@@ -3099,3 +3099,47 @@ input.IATS_InputRequired {
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+
+.TextOurLong{
+    background-color: #ebebeb;
+    min-width: 100px;
+    padding-right: 5px;
+}
+
+.TextOurShort{
+    background-color: #ebebeb;
+    max-width: 45%;
+    min-width: 45px;
+    padding-right: 5px;
+}
+
+.TextOurShortGrey{
+    background-color: #c2c2c2;
+    max-width: 45%;
+    min-width: 45px;
+    padding-right: 5px;
+}
+
+
+.smallRight{
+    position:relative;
+    margin-bottom: 0px;
+    display: inline;
+    left:360px;
+}
+
+.small{
+    margin-bottom: 0px;
+    min-width: 500px;
+    display:inline;
+}
+
+.toggleButt{
+    position
+}
+
+.card-box{
+    background-color: #ebebeb;
+    padding:20px;
+}
