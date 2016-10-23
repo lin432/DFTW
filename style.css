@@ -3150,3 +3150,8 @@ input.IATS_InputRequired {
     color: #d0d0d0;
     
 }
+
+.messageBody{
+    padding:200px;
+    padding-bottom: 400px;
+}
